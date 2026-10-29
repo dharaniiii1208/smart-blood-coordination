@@ -1,0 +1,65 @@
+
+body {
+    background: #f6f7fb;
+    color: #252b36;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background: #8d1725;
+}
+
+.hero {
+    background: linear-gradient(120deg, #8d1725, #c43b4a);
+    color: white;
+    border-radius: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.stat-card, .panel {
+    background: white;
+    border: 1px solid #e8eaf0;
+    border-radius: 14px;
+    padding: 22px;
+    height: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.035);
+}
+
+.stat-card p {
+    color: #687080;
+    margin-bottom: 8px;
+}
+
+.stat-card h2 {
+    color: #a21d30;
+    font-weight: 700;
+    margin: 0;
+}
+
+.panel h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.form-control, .form-select {
+    padding: 10px 12px;
+}
+
+.table thead th {
+    font-size: 0.8rem;
+    color: #687080;
+    white-space: nowrap;
+}
+
+.status {
+    display: inline-block;
+    background: #fff1d6;
+    color: #805600;
+    border-radius: 20px;
+    padding: 5px 9px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
