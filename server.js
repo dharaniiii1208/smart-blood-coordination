@@ -2,6 +2,7 @@
 require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
+
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2/promise');
@@ -27,8 +28,13 @@ const db = mysql.createPool({
   password: process.env.DB_PASSWORD || '',
   database: process.env.DB_NAME || 'blood_coordination',
   ssl: process.env.DB_HOST
-    ? { rejectUnauthorized: true }
-    : undefined,
+  ? {
+      ca: fs.readFileSync(
+        path.join(__dirname, 'certs', 'aiven-ca.pem')
+      ),
+      rejectUnauthorized: true
+    }
+  : undefined,
   waitForConnections: true,
   connectionLimit: 10
 });
