@@ -52,11 +52,11 @@ app.get('/api/db-test', async (req, res) => {
             totalRequests: rows[0].total
         });
     } catch (error) {
-        console.error('Database error:', error.message);
-        res.status(500).json({
-            message: 'Database connection failed. Check your configuration.'
-        });
-    }
+  console.error('Database test error:', error.message);
+  res.status(500).json({
+    message: 'Database connection failed. Check your configuration.'
+  });
+}
 });
 
 
